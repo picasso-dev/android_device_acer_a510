@@ -9,7 +9,7 @@
 		"remote":	"github",
 		"repository":	"picasso-m-mf-dev/android_device_acer_t30-common",
 		"target_path":	"device/acer/t30-common",
-		"revision":	"aospa-legacy"
+		"revision":	"twrp"
 	},
 	{
 		"remote":	"github",

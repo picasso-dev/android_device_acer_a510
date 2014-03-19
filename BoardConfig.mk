@@ -15,3 +15,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/acer/a510/bluetooth
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/acer/a510/prebuilt/ramdisk/fstab.acer
+
+# TWRP
+DEVICE_RESOLUTION := 1280x800

@@ -17,7 +17,8 @@ PRODUCT_COPY_FILES += \
     device/acer/a510/prebuilt/ramdisk/init.picasso_m.rc:root/init.picasso_m.rc \
     device/acer/a510/prebuilt/ramdisk/init.recovery.picasso_m.rc:root/init.recovery.picasso_m.rc \
     device/acer/a510/prebuilt/ramdisk/fstab.acer:root/fstab.acer \
-    device/acer/a510/prebuilt/ramdisk/fstab.acer:root/fstab.picasso_m
+    device/acer/a510/prebuilt/ramdisk/fstab.acer:root/fstab.picasso_m \
+    device/acer/a510/prebuilt/ramdisk/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # lvm files
 PRODUCT_COPY_FILES += \
