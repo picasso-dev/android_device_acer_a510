@@ -1,0 +1,20 @@
+[
+	{
+		"remote":	"github",
+		"repository":	"picasso-m-mf-dev/android_kernel_acer_t30",
+		"target_path":	"kernel/acer/t30",
+		"revision":	"cm-11.0"
+	},
+	{
+		"remote":	"github",
+		"repository":	"picasso-m-mf-dev/android_device_acer_t30-common",
+		"target_path":	"device/acer/t30-common",
+		"revision":	"aospa-legacy"
+	},
+	{
+		"remote":	"github",
+		"repository":	"picasso-m-mf-dev/proprietary_vendor_acer",
+		"target_path":	"vendor/acer",
+		"revision":	"cm-11.0"
+	}
+]
