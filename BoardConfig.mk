@@ -1,6 +1,3 @@
-# inherit from the proprietary version
--include vendor/acer/a510/BoardConfigVendor.mk
-
 # Inherit from t30-common
 include device/acer/t30-common/BoardConfigCommon.mk
 
