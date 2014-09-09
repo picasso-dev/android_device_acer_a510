@@ -1,3 +1,6 @@
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
 # Specify phone tech before including full_phone
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
@@ -8,7 +11,7 @@ PRODUCT_RELEASE_NAME := A510
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/acer/a510/full_a510.mk)
+$(call inherit-product, device/acer/a510/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a510
