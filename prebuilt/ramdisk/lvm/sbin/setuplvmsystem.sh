@@ -5,10 +5,12 @@
 # replace /dev/lvpool/system with an appropriate LV device from your
 # setup
 umount -l /system
+echo "I: lvm: executing setuplvmsystem.sh" >> /tmp/recovery.log
+sleep 10
+echo "I: lvm: check /system" >> /tmp/recovery.log
 [ -e /dev/lvpool/system ] && $(/lvm/sbin/lvm vgck -v) && $(mount /system) && $(umount -l /system) && exit 0
 
-# Replace the commands below with the appropriate ones for your
-# device from step 4
+echo "W: lvm: system broke -> reformat" >> /tmp/recovery.log
 
 # format physical volumes
 umount -l /system
@@ -33,5 +35,7 @@ make_ext4fs /dev/block/platform/sdhci-tegra.3/by-name/FLX
 # format logical volumes
 umount -l /system
 make_ext4fs /dev/lvpool/system
+
+echo "I: lvm: reformat done" >> /tmp/recovery.log
 
 exit 0
