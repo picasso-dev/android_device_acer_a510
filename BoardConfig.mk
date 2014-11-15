@@ -8,7 +8,7 @@ TARGET_OTA_ASSERT_DEVICE := picasso_m,a510_pa_cus1
 TARGET_KERNEL_CONFIG := cyanogenmod_picasso_m_defconfig
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/acer/a510/bluetooth
+#BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/acer/a510/bluetooth
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/acer/a510/prebuilt/ramdisk/fstab.acer
