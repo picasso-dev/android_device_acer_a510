@@ -1,5 +1,5 @@
-PRODUCT_AAPT_CONFIG := normal large xlarge mdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xlarge mdpi
+PRODUCT_AAPT_CONFIG := normal large xhdpi hdpi mdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # USB config contains product-specific USB id
 PRODUCT_COPY_FILES += \
