@@ -20,8 +20,8 @@ PRODUCT_COPY_FILES += \
 # lvm files
 PRODUCT_COPY_FILES += \
     device/acer/a510/prebuilt/ramdisk/lvm/etc/lvm.conf:root/lvm/etc/lvm.conf \
-    device/acer/a510/prebuilt/ramdisk/lvm/sbin/lvm:root/lvm/sbin/lvm \
-    device/acer/a510/prebuilt/ramdisk/lvm/sbin/setuplvmsystem.sh:recovery/root/lvm/sbin/setuplvmsystem.sh
+    device/acer/a510/prebuilt/ramdisk/lvm/sbin/lvm:root/sbin/lvm \
+    device/acer/a510/prebuilt/ramdisk/lvm/sbin/setuplvmsystem.sh:recovery/root/sbin/setuplvmsystem.sh
 
 # Inherit t30-common
 $(call inherit-product, device/acer/t30-common/device_base.mk)

@@ -27,9 +27,6 @@ on init
     symlink /storage/usb0 /mnt/usb_storage
 
 on fs
-    # set permission for lvm system
-    chown root shell /lvm/sbin/lvm
-    chmod 777 /lvm/sbin/lvm
 
 # LVM: Wait for block devices to become available, then set up LVM
 # volumes
@@ -41,6 +38,7 @@ on fs
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
     setprop ro.crypto.umount_sd false
     mount_all /fstab.acer
+    restorecon /dev/lvpool/system
 
 on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -200,12 +198,12 @@ on boot
 
 # LVM services
 # Scan for LVM physical volumes and set up volume groups
-service lvm_vgscan /lvm/sbin/lvm vgscan --mknodes --ignorelockingfailure
+service lvm_vgscan /sbin/lvm vgscan --mknodes --ignorelockingfailure
     disabled
     oneshot
 
 # Activate LVM logical volumes in found volume groups
-service lvm_vgchange /lvm/sbin/lvm vgchange -aly --ignorelockingfailure
+service lvm_vgchange /sbin/lvm vgchange -aly --ignorelockingfailure
     disabled
     oneshot
 
