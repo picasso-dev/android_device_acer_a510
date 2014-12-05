@@ -12,7 +12,7 @@ TARGET_SCREEN_HEIGHT := 800
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/acer/a510/device.mk)
+$(call inherit-product, device/acer/a510/full_a510.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a510
